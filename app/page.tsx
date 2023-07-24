@@ -27,7 +27,7 @@ export default function Home() {
 				<Link
 					isExternal
 					as={NextLink}
-					href={siteConfig.links.docs}
+					href={"https://github.com/Connorbelez/Next13Template"}
 					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
 				>
 					Documentation
@@ -36,7 +36,7 @@ export default function Home() {
 					isExternal
 					as={NextLink}
 					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
+					href={"https://github.com/Connorbelez/Next13Template"}
 				>
 					<GithubIcon size={20} />
 					GitHub
