@@ -12,13 +12,15 @@ import { queryBuilder } from '@/lib/planetscale';
 
 import Google from "next-auth/providers/google"
 
+// @ts-ignore
 export const authOptions  = {
   secret: process.env.AUTH_SECRET,
   providers: [
-
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID || "",
-      clientSecret: process.env.GOOGLE_SECRET || "",
+      // @ts-ignore
+      clientId: process.env.GOOGLE_ID,
+      // @ts-ignore
+      clientSecret: process.env.GOOGLE_SECRET ,
       authorization: {
         params: {
           prompt: "consent",
