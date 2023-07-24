@@ -15,7 +15,7 @@ This is a template for creating applications using Next.js 13 (app directory) an
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## Features
-- Role based google authentication with JWT tokens.
+- Role based google authentication with JWT tokens, with per page auth control through middleware. 
 - Responsive and sexy nav bar with profile avatar.
 - PlanetScale Integration with sample code
 - Kyslely Integration for low weight easy SQL queries
