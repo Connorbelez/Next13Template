@@ -12,14 +12,14 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+				<h1 className={title()}>Next13&nbsp;</h1>
+				<h1 className={title({ color: "violet" })}>Template&nbsp;</h1>
 				<br />
 				<h1 className={title()}>
-					websites regardless of your design experience.
+					Rapidly deploy sexy serverless webapps
 				</h1>
 				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
+					Next13 approuter + NextUI + NextAuth + Planetscale + Kysely
 				</h2>
 			</div>
 
