@@ -20,6 +20,17 @@ This is a template for creating applications using Next.js 13 (app directory) an
 - PlanetScale Integration with sample code
 - Kyslely Integration for low weight easy SQL queries
 
+### SET YOUR LOCAL ENV
+```
+GOOGLE_ID=
+GOOGLE_SECRET=
+GOOGLE_APPLICATION_CREDENTIALS=
+AUTH_SECRET=
+NEXTAUTH_URL="http://localhost:3000" <- for dev only set to actual URL in production env
+DATABASE_URL=
+DATABASE_USER=
+DATABASE_PASSWORD=
+```
 
 ### Install dependencies
 
