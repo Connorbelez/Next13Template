@@ -22,9 +22,9 @@ export default async function middleware(req:NextRequest){
         console.log("MIDDLEWARE !")
         const secret = process.env.AUTH_SECRET
         const token = await getToken({ req, secret })
-        console.log("TOKEN: ",token)
-        console.log("token admin: ", token?.admin)
-        if(!token?.admin){
+
+        if(!token?.role){
+                console.log('NOT ADMIN: ', token?.role)
                 return NextResponse.redirect(new URL('/', req.url))
         }
 
