@@ -1,4 +1,4 @@
-# Next.js & NextUI Template
+# Next.js + NextUI + NextAuth + PlanetScale + Kysely Template
 
 This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
 
@@ -6,33 +6,31 @@ This is a template for creating applications using Next.js 13 (app directory) an
 
 - [Next.js 13](https://nextjs.org/docs/getting-started)
 - [NextUI v2](https://nextui-docs-v2.vercel.app/)
+- [NextAuth](https://next-auth.js.org/)
+- [PlanetScale](https://planetscale.com/docs/tutorials/planetscale-quick-start-guide)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Variants](https://tailwind-variants.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Use
+## Features
+- Role based google authentication with JWT tokens.
+- Responsive and sexy nav bar with profile avatar.
+- PlanetScale Integration with sample code
+- Kyslely Integration for low weight easy SQL queries
 
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
 
 ### Install dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 ### Run the development server
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ## License
