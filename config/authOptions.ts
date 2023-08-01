@@ -8,7 +8,7 @@ import GoogleProvider from 'next-auth/providers/google'
 // import { MongoDBAdapter } from "@auth/mongodb-adapter"
 // import clientPromise from "@/lib/mongodb"
 // import { Adapter } from 'next-auth/adapters'
-import { queryBuilder, insertUser } from '@/lib/planetscale';
+import { queryBuilder, insertUser, getUserRoleByEmail } from '@/lib/planetscale';
 
 import Google from "next-auth/providers/google"
 
@@ -81,17 +81,3 @@ export const authOptions  = {
 
 
 
-async function getUserRoleByEmail(email:string) {
-  const users = await queryBuilder
-      .selectFrom('users')
-      .select(["id","email","admin","event_creator"])
-      .where("email","=",email)
-      .execute();
-
-  console.log("\n\n USERS FROM AUTH API", users);
-  if(users.length > 0){
-    return users[0].admin
-  }
-  return 0;
-
-}
