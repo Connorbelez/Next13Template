@@ -19,6 +19,7 @@ This is a template for creating applications using Next.js 13 (app directory) an
 - Responsive and sexy nav bar with profile avatar.
 - PlanetScale Integration with sample code
 - Kyslely Integration for low weight easy SQL queries
+- Tailwind CSS with variants
 
 ### SET YOUR LOCAL ENV
 ```
