@@ -146,63 +146,8 @@ export type NewUser = Insertable<UserTable>
 export type UserUpdate = Updateable<UserTable>
 
 
-interface EventDatabase {
-  Event: EventInterface;
-  event_table: EventTable;
-  review_table: ReviewTable;
-  ticket_table: TicketTable;
-  user_table: UserTable;
-
-  // https://github.com/nextauthjs/next-auth/issues/4922
-}
 
 // @ts-ignore
-
-
-export async function findEvents(criteria: Partial<SelectEvent>) {
-  let query = queryBuilder.selectFrom('event_table')
-  if (criteria.id) {
-    query = query.where('id', '=', criteria.id) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.event_creator) {
-    query = query.where('event_creator', '=', criteria.event_creator) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.event_creator_id) {
-    query = query.where('event_creator_id', '=', criteria.event_creator_id) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.event_title) {
-    query = query.where('event_title', '=', criteria.event_title) // Kysely is immutable, you must re-assign!
-  }
-  return await query.selectAll().execute()
-}
-
-
-
-export async function findUser(criteria: Partial<SelectUser>){
-  let query = queryBuilder.selectFrom('user_table');
-  if (criteria.id) {
-    query = query.where('id', '=', criteria.id) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.name) {
-    query = query.where('name', '=', criteria.name) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.username) {
-    query = query.where('username', '=', criteria.username) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.email) {
-    query = query.where('email', '=', criteria.email) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.admin) {
-    query = query.where('admin', '=', criteria.admin) // Kysely is immutable, you must re-assign!
-  }
-  if (criteria.event_creator) {
-    query = query.where('event_creator', '=', criteria.event_creator) // Kysely is immutable, you must re-assign!
-  }
-  return await query.selectAll().execute()
-
-
-}
-
 
 
 
